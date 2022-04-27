@@ -1,0 +1,18 @@
+
+body {
+    padding: 0 10px;
+}
+
+canvas {
+    border: solid 1px black;
+    margin: 15px 0 0 0;
+    display: block;
+}
+
+p {
+    display: inline;
+}
+
+.container{
+    margin-top: 10px;
+}

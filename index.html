@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <title>1</title>
+
+</head>
+
+<body>
+    <div>
+        <h1>Paint Your Own Picture</h1>
+
+        <p class="inl" >Set Width</p>
+        <input type="text" onchange="setWidth(this.value)" />
+
+        <p class="inl" >Set Height</p>
+        <input type="text" onchange="setHeight(this.value)" />
+    </div>
+    
+    <canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX, event.offsetY)"
+    onmouseup = "endPaint()" ></canvas>
+
+    <div class="container">
+        <p>Bursh Color</p>
+        <input type="color" value="#000" onchange="setColor(this.value)" />
+
+        <p>Bursh Size</p>
+        <input type="range" id="sizeInpt" min="1" max="50" value="50" oninput = "resizeBrush(this.value)">
+        <output id="sizeOutput">50</output>
+
+    </div>
+    <input type="button" id="clear" value="Clear Canvas" onclick="clearCanvas()" />
+    
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>
